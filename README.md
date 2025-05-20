@@ -22,7 +22,8 @@ Sistem ini dikembangkan untuk mengatasi masalah:
 Dengan sistem ini, operasional toko menjadi lebih cepat, efisien, dan terorganisir.
 
 ## 👨‍💻 Anggota Kelompok
-- [Nama Anggota 1]  
-- [Nama Anggota 2]  
-- [Nama Anggota 3]  
-*(Silakan lengkapi bagian ini)*
+- BENRYCHO WILLYAM R. NENOBAIS  
+- BRIFLY ANTHON WATTIMURY 
+- JORDY GABRIEL FIRMANDA
+- GREGORIUS JONATHAN
+- NICHOLAS GRAHITA ERWAN 
