@@ -1,30 +1,62 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <title>Daftar</title>
-    <link rel="stylesheet" href="public/css/create-account.css">
+     <meta charset="UTF-8" />
+     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     <title>Login Page</title>
+     <link href="public/css/styles.css" rel="stylesheet" />
 </head>
+
 <body>
-    <div class="container">
-        <form action="index.php?action=register" method="POST" class="form-box">
-            <img src="public/images/Logo.png" alt="Logo" class="logo">
-            <h2>Daftar</h2>
-            <input type="text" name="fullname" placeholder="Nama Lengkap" required>
-            <input type="text" name="username" placeholder="Username" required>
-            <input type="password" name="password" placeholder="Password (min 8 karakter)" required>
-            <input type="email" name="email" placeholder="Email" required>
-            <input type="text" name="address" placeholder="Alamat" required>
-            <input type="text" name="phone" placeholder="Nomor Telepon" required>
-            <label>
-                <input type="checkbox" required> Saya setuju dengan <a href="#">Terms of Use</a> & <a href="#">Privacy Policy</a>
-            </label>
-            <button type="submit">Daftar</button>
-            <p>Sudah memiliki akun? <a href="#">Log in</a></p>
-        </form>
-        <div class="image-box">
-            <img src="public/images/climber.png" alt="Climber" />
-        </div>
-    </div>
+     <div class="container">
+          <!-- Left Side (Login Form) -->
+          <div class="form-section">
+               <div class="form-container">
+                    <img src="Logo.png" alt="Company Logo" class="logo-img" />
+                    <h2>Sign In</h2>
+                    <p class="subtitle">Enter your credentials to access your account.</p>
+
+                    <form>
+                         <input type="email" placeholder="Enter your email address" />
+                         <input type="password" placeholder="Enter your password" />
+                         <button type="submit">Sign In</button>
+                    </form>
+
+                    <div class="divider">
+                         <hr />
+                         <span>Or continue with</span>
+                         <hr />
+                    </div>
+
+                    <div class="social-buttons">
+                          <button class="social google">
+                              <img src="https://cdn1.iconfinder.com/data/icons/google-s-logo/150/Google_Icons-09-1024.png" alt="Google" />
+                              Google
+                         </button>
+                          <button class="social apple">
+                              <img src="https://www.freeiconspng.com/uploads/apple-icon-4.png" alt="Apple" />
+                                Apple
+                          </button>
+                         </button>
+                    </div>
+
+                    <p class="signup">
+                         Don’t have an account? <a href="#">Create an account</a>
+                    </p>
+
+                    <div class="footer-links">
+                         <a href="#">Privacy & Terms</a>
+                         <a href="#">Contact Us</a>
+                    </div>
+               </div>
+          </div>
+
+          <!-- Right Side (Image) -->
+          <div class="image-section">
+               <img src="public/assets/Right_Picture.png" alt="Climber" />
+          </div>
+     </div>
 </body>
+
 </html>
