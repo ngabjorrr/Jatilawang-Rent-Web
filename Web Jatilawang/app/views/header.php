@@ -7,7 +7,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Jatilawang Adventure <?php echo isset($pageTitle) ? "- " . htmlspecialchars($pageTitle) : ""; ?></title>
-  <link rel="stylesheet" href="public/css/main_layout.css"> </head>
+  <link rel="stylesheet" href="public/css/main_layout.css">
+</head>
 <body>
   <header class="main-header">
     <div class="header-content">
@@ -33,8 +34,14 @@
         </nav>
       </div>
       <div class="search-bar">
-        <svg xmlns="http://www.w3.org/2000/svg" height="18px" viewBox="0 0 24 24" width="18px"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/><path d="M0 0h24v24H0z" fill="none"/></svg>
-        <input type="text" placeholder="Cari Barang">
+        <form method="GET" action="index.php" style="display: flex; align-items: center;">
+  <svg xmlns="http://www.w3.org/2000/svg" height="18px" viewBox="0 0 24 24" width="18px">
+    <path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+    <path d="M0 0h24v24H0z" fill="none"/>
+  </svg>
+  <input type="text" name="search" placeholder="Cari Barang" value="<?php echo isset($_GET['search']) ? htmlspecialchars($_GET['search']) : ''; ?>">
+</form>
+
       </div>
     </div>
-  </header>
+  </header>
