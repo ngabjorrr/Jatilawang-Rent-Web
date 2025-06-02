@@ -1,7 +1,5 @@
-<!-- app/views/footer.php -->
-<footer>
-  <hr>
-  <p>© 2025 Jatilawang Adventure</p>
-</footer>
+<footer class="main-footer">
+    <p>&copy; <?php echo date("Y"); ?> Jatilawang Adventure. Hak Cipta Dilindungi.</p>
+  </footer>
 </body>
 </html>

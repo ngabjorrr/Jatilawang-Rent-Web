@@ -13,7 +13,7 @@
           <!-- Left Side (Login Form) -->
           <div class="form-section">
                <div class="form-container">
-                    <img src="Logo.png" alt="Company Logo" class="logo-img" />
+                    <img src="public/assets/Logo.png" alt="Company Logo" class="logo-img" />
                     <h2>Sign In</h2>
                     <p class="subtitle">Enter your credentials to access your account.</p>
 
