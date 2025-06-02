@@ -1,13 +1,14 @@
 <?php
-// Initialization
+// File: Web Jatilawang/login.php
 session_start();
 if (isset($_SESSION['user'])) { // Jika pengguna sudah login, redirect ke index.php
     header("Location: index.php");
     exit;
 }
 
-// View Rendering
-// File app/views/register.php (yang Anda gunakan) sudah berisi halaman HTML login yang lengkap.
-// Jadi, kita hanya perlu meng-include itu.
-include "app/views/register.php"; //
+$active_form = 'login'; // Signal to the template which form to show by default
+
+// Include the new combined authentication view
+// This replaces any previous includes of header, footer, or specific login form views.
+include __DIR__ . "/app/views/auth_forms.php";
 ?>
