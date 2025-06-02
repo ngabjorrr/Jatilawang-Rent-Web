@@ -6,26 +6,26 @@ require_once "functions.php"; //
 require_once "app/controllers/ProductController.php"; //
 
 // Input Validation
-if (!isset($_GET['id'])) { 
-    header("Location: index.php"); 
-    exit; 
+if (!isset($_GET['id'])) {
+    header("Location: index.php");
+    exit;
 }
 $productId = filter_var($_GET['id'], FILTER_VALIDATE_INT);
 if ($productId === false) {
     // Atau tampilkan halaman error
-    header("Location: index.php"); 
+    header("Location: index.php");
     exit;
 }
 
 // Data Fetching
 $product = getProductById($productId); //
 
-if (!$product) { 
+if (!$product) {
     $pageTitle = "Produk Tidak Ditemukan";
     include "app/views/header.php"; //
     echo "<div class='page-container'><p>Produk yang Anda cari tidak ditemukan.</p><div class='back-link-container'><a href='index.php' class='back-link'>Kembali ke Daftar Produk</a></div></div>";
     include "app/views/footer.php"; //
-    exit; 
+    exit;
 }
 
 $pageTitle = htmlspecialchars($product['name']); //

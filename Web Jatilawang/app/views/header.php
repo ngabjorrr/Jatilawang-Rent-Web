@@ -16,7 +16,14 @@
         <nav>
           <ul>
             <li><a href="index.php" class="<?php echo (basename($_SERVER['PHP_SELF']) == 'index.php' || strpos($_SERVER['PHP_SELF'], 'detail.php') !== false) ? 'active' : ''; ?>">Produk</a></li>
-            <li><a href="keranjang.php" class="<?php echo (basename($_SERVER['PHP_SELF']) == 'keranjang.php') ? 'active' : ''; ?>">Keranjang</a></li>
+            <li><a href="keranjang.php" class="<?php echo (basename($_SERVER['PHP_SELF']) == 'keranjang.php' || basename($_SERVER['PHP_SELF']) == 'checkout.php') ? 'active' : ''; ?>">Keranjang
+                <?php
+                // Pastikan session sudah dimulai di file pemanggil (index.php, keranjang.php, dll)
+                if (isset($_SESSION['cart']) && count($_SESSION['cart']) > 0) {
+                    echo ' <span style="background-color: #e74c3c; color: white; padding: 2px 5px; border-radius: 50%; font-size: 0.8em;">' . count($_SESSION['cart']) . '</span>';
+                }
+                ?>
+            </a></li>
             <?php if (isset($_SESSION['user'])): ?>
               <li><a href="logout.php">Logout</a></li>
             <?php else: ?>

@@ -17,9 +17,9 @@
                     <h2>Sign In</h2>
                     <p class="subtitle">Enter your credentials to access your account.</p>
 
-                    <form>
-                         <input type="email" placeholder="Enter your email address" />
-                         <input type="password" placeholder="Enter your password" />
+                    <form action="proses_login.php" method="post">
+                         <input type="email" name="email" placeholder="Enter your email address" required />
+                         <input type="password" name="password" placeholder="Enter your password" required />
                          <button type="submit">Sign In</button>
                     </form>
 
@@ -30,19 +30,19 @@
                     </div>
 
                     <div class="social-buttons">
-                          <button class="social google">
+                         <button class="social google">
                               <img src="https://cdn1.iconfinder.com/data/icons/google-s-logo/150/Google_Icons-09-1024.png" alt="Google" />
                               Google
                          </button>
-                          <button class="social apple">
+                         <button class="social apple">
                               <img src="https://www.freeiconspng.com/uploads/apple-icon-4.png" alt="Apple" />
-                                Apple
-                          </button>
+                              Apple
+                         </button>
                          </button>
                     </div>
 
                     <p class="signup">
-                         Don’t have an account? <a href="#">Create an account</a>
+                         Don’t have an account? <a href="register_page.php">Create an account</a>
                     </p>
 
                     <div class="footer-links">
