@@ -1,0 +1,204 @@
+/* ===== Google Font Import - Poppins ===== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('../assets/web_background.jpg'); 
+    background-size: cover; 
+    background-position: center center; 
+    background-repeat: no-repeat; 
+    background-attachment: fixed; 
+    margin: 0; 
+    padding: 0; 
+}
+
+.container {
+    position: relative;
+    max-width: 430px;
+    width: 100%;
+    background: #ffffff88; /* Latar belakang container utama semi-transparan */
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin: 0 20px;
+}
+
+.container .forms {
+    display: flex;
+    align-items: center;
+    height: 440px; /* Sesuaikan jika perlu untuk login form */
+    width: 200%;
+    transition: height 0.2s ease;
+}
+
+
+.container .form {
+    width: 50%;
+    padding: 30px;
+    /* background-color: #ffffff3d; Dihapus karena .container sudah punya, kecuali ingin layer berbeda */
+    transition: margin-left 0.18s ease;
+}
+
+.container.active .login {
+    margin-left: -50%;
+    opacity: 0;
+    transition: margin-left 0.18s ease, opacity 0.15s ease;
+}
+
+.container .signup {
+    opacity: 0;
+    transition: opacity 0.09s ease;
+}
+
+.container.active .signup {
+    opacity: 1;
+    transition: opacity 0.2s ease;
+}
+
+.container.active .forms {
+    height: 800px; /* Pastikan ini cukup untuk semua field registrasi */
+}
+
+.container .form .title {
+    position: relative;
+    font-size: 27px;
+    font-weight: 600;
+    color: #000000; /* Warna teks judul mungkin perlu disesuaikan agar kontras dengan background */
+}
+
+.form .title::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 30px;
+    background-color: #0044ff;
+    border-radius: 25px;
+}
+
+.form .input-field {
+    position: relative;
+    height: 50px;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.input-field input {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    padding: 0 35px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    border-bottom: 2px solid #ffffff88; /* Border bawah awal semi-transparan putih */
+    background-color: rgba(255, 255, 255, 0.2); /* Latar belakang awal semi-transparan putih */
+    color: #000000; 
+    transition: all 0.2s ease;
+    
+    /* Tambahkan baris ini untuk membuat input field agak transparan */
+    background-color: rgba(255, 255, 255, 0.2); /* Latar belakang awal semi-transparan */
+    color: #000000; /* Warna teks di dalam input, pastikan kontras */
+}
+
+/* Styling untuk placeholder agar lebih terlihat di background transparan */
+.input-field input::placeholder {
+  color: #555; /* Warna placeholder, sesuaikan agar kontras */
+  opacity: 1; /* Untuk memastikan browser tidak membuatnya terlalu transparan */
+}
+
+
+.input-field input:is(:focus, :valid) {
+    border-bottom-color: #003fed;   /* Warna border bawah berubah menjadi biru solid */
+    background-color: #ffffff;     /* Latar belakang menjadi putih solid */
+}
+
+.input-field i {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999; /* Warna ikon mungkin perlu disesuaikan */
+    font-size: 23px;
+    transition: all 0.2s ease;
+}
+
+.input-field input:is(:focus, :valid)~i {
+    color: #4070f4;
+}
+
+.input-field i.icon {
+    left: 0;
+}
+
+.input-field i.showHidePw {
+    right: 0;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.form .checkbox-text {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.checkbox-text .checkbox-content {
+    display: flex;
+    align-items: center;
+}
+
+.checkbox-content input {
+    margin-right: 10px;
+    accent-color: #0044ff;
+}
+
+.form .text, .form .checkbox-text .checkbox-content label {
+    color: #000000; /* Warna teks umum dan label checkbox, pastikan kontras */
+    font-size: 14px;
+}
+
+.form a.text {
+    color: #ffffff;
+    text-decoration: none;
+}   
+
+.form a:hover {
+    text-decoration: underline;
+}
+
+.form .button {
+    margin-top: 35px;
+}
+
+.form .button input {
+    border: none;
+    color: #fff;
+    font-size: 17px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    border-radius: 6px;
+    background-color: #4070f4;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.button input:hover {
+    background-color: #265df2;
+}
+
+.form .login-signup {
+    margin-top: 30px;
+    text-align: center;
+}
